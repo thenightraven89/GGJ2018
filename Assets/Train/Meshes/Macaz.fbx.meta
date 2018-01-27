@@ -1,31 +1,24 @@
 fileFormatVersion: 2
-guid: fe4d8ce1db945a747b0f24eb58b7a4a6
-timeCreated: 1517088621
+guid: fc1b0e8e396bb2543acb8b0c46ee4622
+timeCreated: 1517096350
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Gun
-    100004: TrainGun
+    100002: Macaz
+    100004: Macaz_lever
     400000: //RootNode
-    400002: Gun
-    400004: TrainGun
-    2100000: Train
-    2300000: //RootNode
-    2300002: Gun
-    2300004: TrainGun
-    3300000: //RootNode
-    3300002: Gun
-    3300004: TrainGun
-    4300000: TrainGun
-    4300002: Gun
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Train
-    second: {fileID: 2100000, guid: 0db5c314202f000418e9ba1607d58aa2, type: 2}
+    400002: Macaz
+    400004: Macaz_lever
+    2100000: Default
+    2300000: Macaz
+    2300002: Macaz_lever
+    3300000: Macaz
+    3300002: Macaz_lever
+    4300000: Macaz_lever
+    4300002: Macaz
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
