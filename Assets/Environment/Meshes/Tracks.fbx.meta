@@ -14,11 +14,18 @@ ModelImporter:
     2100000: Default
     2300000: RailTrack
     2300002: RailTrack_Curb
+    2300004: //RootNode
     3300000: RailTrack
     3300002: RailTrack_Curb
+    3300004: //RootNode
     4300000: RailTrack
     4300002: RailTrack_Curb
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default
+    second: {fileID: 2100000, guid: ded0cbcd370d7654a8d76ac107ddbf70, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
