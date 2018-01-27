@@ -23,11 +23,6 @@ public class Tunnel : MonoBehaviour
 		StartCoroutine(SpawnTrainCoroutine(wagonCount));
 	}
 
-	public void SetColor(Color color)
-	{
-
-	}
-
 	private IEnumerator SpawnTrainCoroutine(int wagonCount)
 	{
 		var newLocomotive = Instantiate(locomotive, transform.position, transform.rotation);
