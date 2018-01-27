@@ -10,12 +10,11 @@ public class Tunnel : MonoBehaviour
 	[SerializeField]
 	private GameObject wagon;
 
-	[SerializeField]
-	private float spawnTime;
+	private float spawnTime = .5f;
 
-	private void Awake()
+	private void Start()
 	{
-		SpawnTrain(4);
+		SpawnTrain(5);
 	}
 
 	public void SpawnTrain(int wagonCount)
@@ -26,11 +25,17 @@ public class Tunnel : MonoBehaviour
 	private IEnumerator SpawnTrainCoroutine(int wagonCount)
 	{
 		var newLocomotive = Instantiate(locomotive, transform.position, transform.rotation);
+		newLocomotive.GetComponent<MovingPart>().Initialize();
 
 		for (int i = 0; i < wagonCount; i++)
 		{
 			yield return new WaitForSeconds(spawnTime);
-			Instantiate(wagon, transform.position, transform.rotation);
+			var newWagon = Instantiate(
+				wagon,
+				transform.position,
+				transform.rotation);
+
+			newWagon.GetComponent<MovingPart>().Initialize();
 		}
 	}
 }

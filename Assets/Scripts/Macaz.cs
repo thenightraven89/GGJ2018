@@ -5,13 +5,13 @@ using UnityEngine;
 public class Macaz : MonoBehaviour
 {
 	[SerializeField]
-	private SwitchType SwitchType {get; set;}
+	private SwitchType switchType;
 
 	public int TypeIndex
 	{
 		get
 		{
-			return (int)SwitchType;
+			return (int)switchType;
 		}
 	}
 }
