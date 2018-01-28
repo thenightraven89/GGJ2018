@@ -58,25 +58,19 @@ public class MovingPart : MonoBehaviour
 		yield return StartCoroutine(Move(fromPos + toDir, toDir, targetDir ));
 	}
 
-	private void Update()
+	void OnTriggerEnter(Collider other)
 	{
-		// newPos = Vector3Int.FloorToInt(transform.position);
-		// if (currentPos != newPos)
+		// var mp = other.GetComponent<MovingPart>();
+		// if (mp != null)
 		// {
-		// 	currentPos = newPos;
-		// 	var dir = Vector3Int.FloorToInt(transform.forward);
-		// 	var targetDir = grid.GetDirectionFor(currentPos, dir);
-		// 	Debug.Log(targetDir);
-		// 	StartCoroutine(Move(currentPos, dir, targetDir));
+		// 	mp.Explode();
+		// 	Explode();
 		// }
 	}
 
-	private void OnDrawGizmos()
+	public void Explode()
 	{
-		Gizmos.color = Color.red;
-		Gizmos.DrawLine(currentPos, currentPos + Vector3.right);
-		Gizmos.DrawLine(currentPos, currentPos + Vector3.back);
-		Gizmos.DrawLine(currentPos + Vector3.right, currentPos + Vector3.right + Vector3.back);
-		Gizmos.DrawLine(currentPos + Vector3.back, currentPos + Vector3.right + Vector3.back);
+		Main.Instance.GenerateExplosionPS(transform.position, 50);
+		Destroy(this);
 	}
 }

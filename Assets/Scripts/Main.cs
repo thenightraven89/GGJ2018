@@ -13,8 +13,12 @@ public class Main : MonoBehaviour
 
 	private Tunnel[] tunnels;
 
+	public static Main Instance {get; private set;}
+
 	void Awake()
 	{
+		Instance = this;
+		
 		if (PlayerPrefs.GetInt("player1") > 0)
 		{
 			var newChar = Instantiate(
@@ -96,6 +100,15 @@ public class Main : MonoBehaviour
 			trainTimeGap = Mathf.Clamp(trainTimeGap - 0.25f, 4f, 10f);
 		}
 	}
+
+	public void GenerateExplosionPS(Vector3 position, int count)
+	{
+		explodePS.transform.position = position;
+		explodePS.Emit(count);
+	}
+
+	[SerializeField]
+	private ParticleSystem explodePS;
 
 	[SerializeField]
 	private Color[] colors;
