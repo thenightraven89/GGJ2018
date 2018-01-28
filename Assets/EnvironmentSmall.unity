@@ -1808,6 +1808,7 @@ MonoBehaviour:
   - {fileID: 2077335514}
   - {fileID: 226504088}
   - {fileID: 1575067415}
+  crashFX: {fileID: 8300000, guid: 77f98091d600fb346bd88023ca7af891, type: 3}
   explodePS: {fileID: 323746904}
   colors:
   - {r: 1, g: 0, b: 0, a: 1}
