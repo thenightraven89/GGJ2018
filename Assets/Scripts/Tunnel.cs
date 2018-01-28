@@ -74,7 +74,7 @@ public class Tunnel : MonoBehaviour
 		{
 			if (mp.GetColor() == tunnelRenderer.material.color)
 			{
-				Debug.Log("POINTS");
+				Score.Instance.Add();
 				// earn points
 				// play a nice sfx
 			}
