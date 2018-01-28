@@ -5505,6 +5505,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 416123911}
   m_Mesh: {fileID: 4300000, guid: e287ef84aa28c2c44afff0c915350564, type: 3}
+--- !u!1001 &424111638
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4987109713253634, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987109713253634, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987109713253634, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987109713253634, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987109713253634, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987109713253634, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987109713253634, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987109713253634, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+      propertyPath: m_RootOrder
+      value: 42
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 72c568d8195263f4aa7e84f6692a19ae, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &427594224
 GameObject:
   m_ObjectHideFlags: 0
@@ -11507,6 +11549,7 @@ GameObject:
   - component: {fileID: 864277044}
   - component: {fileID: 864277043}
   - component: {fileID: 864277047}
+  - component: {fileID: 864277048}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11589,6 +11632,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 2967533a2097ee24d91a969fb5e8e2ad, type: 2}
+--- !u!82 &864277048
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864277042}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &874231922
 GameObject:
   m_ObjectHideFlags: 0
@@ -23991,6 +24114,7 @@ MonoBehaviour:
   - {fileID: 2077335514}
   - {fileID: 226504088}
   - {fileID: 1575067415}
+  crashFX: {fileID: 8300000, guid: 77f98091d600fb346bd88023ca7af891, type: 3}
   explodePS: {fileID: 309555841}
   colors:
   - {r: 1, g: 0, b: 0, a: 1}

@@ -105,7 +105,13 @@ public class Main : MonoBehaviour
 	{
 		explodePS.transform.position = position;
 		explodePS.Emit(count);
+		var src = Camera.main.GetComponent<AudioSource>();
+		src.pitch = Random.Range(0.8f, 1.2f);
+		src.PlayOneShot(crashFX);
 	}
+
+	[SerializeField]
+	private AudioClip crashFX;
 
 	[SerializeField]
 	private ParticleSystem explodePS;
