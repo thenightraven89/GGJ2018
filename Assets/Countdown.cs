@@ -23,7 +23,7 @@ public class Countdown : MonoBehaviour {
 			text.text = (seconds / 60).ToString("D2") + ":" + (seconds % 60).ToString("D2");
 			yield return new WaitForSeconds(1f);
 		}
-
-		SceneManager.LoadScene("Menu");
+		PlayerPrefs.SetInt("score", Score.Instance.GetScore());
+		SceneManager.LoadScene("GameOver");
 	}
 }

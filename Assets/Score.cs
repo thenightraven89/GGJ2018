@@ -21,4 +21,9 @@ public class Score : MonoBehaviour {
 		score++;
 		text.text = score.ToString();
 	}
+
+	public int GetScore()
+	{
+		return score;
+	}
 }
