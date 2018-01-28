@@ -33,4 +33,13 @@ public class Gun : MonoBehaviour
     {
         PS.Stop();
     }
+
+    void OnDestroy()
+    {
+        if (PlayerLocation.childCount > 0)
+        {
+            var player = PlayerLocation.GetChild(0);
+            player.GetComponent<CharacterInput>().DisengageGun();
+        }
+    }
 }

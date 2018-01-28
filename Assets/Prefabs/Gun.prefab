@@ -36,6 +36,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4223027847322376}
+  - component: {fileID: 54431264823896172}
+  - component: {fileID: 135164741263938244}
   m_Layer: 0
   m_Name: TrainGun
   m_TagString: Untagged
@@ -53,8 +55,8 @@ GameObject:
   - component: {fileID: 4706359546143376}
   - component: {fileID: 114687911785527870}
   - component: {fileID: 114987220504124882}
-  - component: {fileID: 54221016520503794}
   - component: {fileID: 135609658936016374}
+  - component: {fileID: 54640054163431380}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -172,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1357114193934230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4223027847322376}
@@ -276,7 +278,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1845746870037712}
   m_Mesh: {fileID: 4300000, guid: fe4d8ce1db945a747b0f24eb58b7a4a6, type: 3}
---- !u!54 &54221016520503794
+--- !u!54 &54431264823896172
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322802921667850}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54640054163431380
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -302,6 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1caa90897b3cf41bc5a1dcf13dc6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coloredPart: {fileID: 0}
+  isInvincible: 0
 --- !u!114 &114987220504124882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,6 +335,18 @@ MonoBehaviour:
   PlayerLocation: {fileID: 4372853267074152}
   Turret: {fileID: 4833577261370746}
   PS: {fileID: 198664297977249308}
+--- !u!135 &135164741263938244
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322802921667850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135609658936016374
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -326,8 +357,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!198 &198664297977249308
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -388,7 +419,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1788902218
+  randomSeed: 203552649
   InitialModule:
     serializedVersion: 3
     enabled: 1

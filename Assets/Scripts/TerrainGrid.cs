@@ -70,8 +70,7 @@ public class TerrainGrid : MonoBehaviour
 			}
 			else
 			{
-				Debug.Log(direction);
-				return direction;
+				return Vector3Int.zero;
 			}
 		}
 		else

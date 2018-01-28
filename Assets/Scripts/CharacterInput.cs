@@ -67,40 +67,43 @@ public class CharacterInput : MonoBehaviour
 		{
 			if (dir.magnitude == 1f)
 			{
+				if (gun != null)
+				
 				gun.Turret.forward = dir;
 			}
 
 			if (XCI.GetButtonDown(XboxButton.A, controller))
 			{
+				if (gun != null)
 				gun.StartShoot();
 			}
 
 			if (XCI.GetButtonUp(XboxButton.A, controller))
 			{
+				if (gun != null)
 				gun.EndShoot();
 			}
 
 			if (XCI.GetButtonDown(XboxButton.B, controller))
 			{
-				gun = null;
-				isGunning = false;
-				transform.parent = null;
-				transform.position = new Vector3(
-					transform.position.x,
-					0.5f,
-					transform.position.z);
-				transform.rotation = Quaternion.identity;
+				DisengageGun();
 			}
 		}
-
-
-
-
-		//transform.Translate(Vector3.forward * dir.magnitude * Time.deltaTime * speed, Space.Self);
-		//transform.Translate(dir * Time.deltaTime * speed);
 	}
 
-	Macaz macaz;
+    public void DisengageGun()
+    {
+		gun = null;
+		isGunning = false;
+		transform.parent = null;
+		transform.position = new Vector3(
+			transform.position.x,
+			0.5f,
+			transform.position.z);
+		transform.rotation = Quaternion.identity;
+    }
+
+    Macaz macaz;
 	Gun gun;
 
 
@@ -113,7 +116,7 @@ public class CharacterInput : MonoBehaviour
 			m.Highlight();
 		}
 
-		var g = other.GetComponent<Gun>();
+		var g = other.GetComponentInParent<Gun>();
 		if (g != null)
 		{
 			gun = g;
@@ -130,7 +133,7 @@ public class CharacterInput : MonoBehaviour
 			m.UnHighlight();
 		}
 
-		var g = other.GetComponent<Gun>();
+		var g = other.GetComponentInParent<Gun>();
 		if (g != null && g == gun)
 		{
 			gun = null;

@@ -70,15 +70,17 @@ public class Tunnel : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		var mp = other.GetComponent<MovingPart>();
-		if (mp != null)
+		if (mp != null && Vector3Int.RoundToInt(other.transform.forward) == Vector3Int.RoundToInt(-transform.forward))
 		{
 			if (mp.GetColor() == tunnelRenderer.material.color)
 			{
+				Debug.Log("POINTS");
 				// earn points
 				// play a nice sfx
 			}
 			else
 			{
+				Debug.Log("PENALTY");
 				// lose points
 				// play a nasty sfx
 				// train explodes?

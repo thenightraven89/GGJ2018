@@ -54,23 +54,35 @@ public class MovingPart : MonoBehaviour
 		transform.position = fromPos + toDir;
 		transform.forward = toDir;
 		var targetDir = grid.GetDirectionFor(fromPos + toDir, toDir);
-
-		yield return StartCoroutine(Move(fromPos + toDir, toDir, targetDir ));
+		if (targetDir == Vector3Int.zero)
+		{
+			Explode();
+		}
+		else
+		{
+		yield return StartCoroutine(Move(fromPos + toDir, toDir, targetDir));
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		// var mp = other.GetComponent<MovingPart>();
-		// if (mp != null)
-		// {
-		// 	mp.Explode();
-		// 	Explode();
-		// }
+		var mp = other.GetComponent<MovingPart>();
+		if (mp != null)
+		{
+			mp.Explode();
+			Explode();
+		}
 	}
+
+
+	public bool isInvincible;
 
 	public void Explode()
 	{
+		if (!isInvincible)
+		{
 		Main.Instance.GenerateExplosionPS(transform.position, 50);
-		Destroy(this);
+		Destroy(gameObject);
+		}
 	}
 }
