@@ -20,7 +20,7 @@ public class Tunnel : MonoBehaviour
 
 	void Awake()
 	{
-		SetColor(Color.white);
+		tunnelRenderer.material.color = Color.white;
 	}
 
 	public bool IsBusy()
@@ -28,9 +28,16 @@ public class Tunnel : MonoBehaviour
 		return tunnelRenderer.material.color != Color.white;
 	}
 
-	public void SetColor(Color color)
+	public void SetColor(Color color, float availableTime)
 	{
 		tunnelRenderer.material.color = color;
+		StartCoroutine(ResetColor(availableTime));
+	}
+
+	IEnumerator ResetColor(float availableTime)
+	{
+		yield return new WaitForSeconds(availableTime);
+		tunnelRenderer.material.color = Color.white;
 	}
 
 	public void SpawnTrain(int wagonCount, Color color)
@@ -58,5 +65,24 @@ public class Tunnel : MonoBehaviour
 		
 		var newGun = Instantiate(gun, transform.position, transform.rotation);
 		newGun.GetComponent<MovingPart>().Initialize(color);
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		var mp = other.GetComponent<MovingPart>();
+		if (mp != null)
+		{
+			if (mp.GetColor() == tunnelRenderer.material.color)
+			{
+				// earn points
+				// play a nice sfx
+			}
+			else
+			{
+				// lose points
+				// play a nasty sfx
+				// train explodes?
+			}
+		}
 	}
 }

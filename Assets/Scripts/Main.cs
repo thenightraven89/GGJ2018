@@ -81,7 +81,7 @@ public class Main : MonoBehaviour
 				toTunnel = Random.Range(0, tunnels.Length);
 			}
 
-			tunnels[toTunnel].SetColor(color);
+			tunnels[toTunnel].SetColor(color, 30f);
 
 			while (tunnels[fromTunnel].IsBusy())
 			{
@@ -99,11 +99,4 @@ public class Main : MonoBehaviour
 
 	[SerializeField]
 	private Color[] colors;
-}
-
-public class Objective
-{
-	public Tunnel fromTunnel;
-	public Tunnel toTunnel;
-	public MovingPart[] cargo;
 }
