@@ -54,6 +54,11 @@ public class TerrainGrid : MonoBehaviour
 		}
 	}
 
+	public void ChangeSwitch(Vector3Int pos, Macaz macaz)
+	{
+		switches[pos] = availableTiles[macaz.TypeIndex];
+	}
+
 	public Vector3Int GetDirectionFor(Vector3Int pos, Vector3Int direction)
 	{
 		if (switches.ContainsKey(pos))

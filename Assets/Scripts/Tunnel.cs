@@ -10,7 +10,10 @@ public class Tunnel : MonoBehaviour
 	[SerializeField]
 	private GameObject wagon;
 
-	private float spawnTime = .5f;
+	[SerializeField]
+	private GameObject gun;
+
+	private float spawnTime = .6f;
 
 	private void Start()
 	{
@@ -37,5 +40,10 @@ public class Tunnel : MonoBehaviour
 
 			newWagon.GetComponent<MovingPart>().Initialize();
 		}
+
+		yield return new WaitForSeconds(spawnTime);
+		
+		var newGun = Instantiate(gun, transform.position, transform.rotation);
+		newGun.GetComponent<MovingPart>().Initialize();
 	}
 }
