@@ -13,22 +13,35 @@ public class Tunnel : MonoBehaviour
 	[SerializeField]
 	private GameObject gun;
 
+	[SerializeField]
+	private Renderer tunnelRenderer;
+
 	private float spawnTime = .6f;
 
-	private void Start()
+	void Awake()
 	{
-		SpawnTrain(5);
+		SetColor(Color.white);
 	}
 
-	public void SpawnTrain(int wagonCount)
+	public bool IsBusy()
 	{
-		StartCoroutine(SpawnTrainCoroutine(wagonCount));
+		return tunnelRenderer.material.color != Color.white;
 	}
 
-	private IEnumerator SpawnTrainCoroutine(int wagonCount)
+	public void SetColor(Color color)
+	{
+		tunnelRenderer.material.color = color;
+	}
+
+	public void SpawnTrain(int wagonCount, Color color)
+	{
+		StartCoroutine(SpawnTrainCoroutine(wagonCount, color));
+	}
+
+	private IEnumerator SpawnTrainCoroutine(int wagonCount, Color color)
 	{
 		var newLocomotive = Instantiate(locomotive, transform.position, transform.rotation);
-		newLocomotive.GetComponent<MovingPart>().Initialize();
+		newLocomotive.GetComponent<MovingPart>().Initialize(color);
 
 		for (int i = 0; i < wagonCount; i++)
 		{
@@ -38,12 +51,12 @@ public class Tunnel : MonoBehaviour
 				transform.position,
 				transform.rotation);
 
-			newWagon.GetComponent<MovingPart>().Initialize();
+			newWagon.GetComponent<MovingPart>().Initialize(color);
 		}
 
 		yield return new WaitForSeconds(spawnTime);
 		
 		var newGun = Instantiate(gun, transform.position, transform.rotation);
-		newGun.GetComponent<MovingPart>().Initialize();
+		newGun.GetComponent<MovingPart>().Initialize(color);
 	}
 }

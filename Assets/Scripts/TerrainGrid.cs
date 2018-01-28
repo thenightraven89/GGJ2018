@@ -49,7 +49,7 @@ public class TerrainGrid : MonoBehaviour
 		{
 			//Debug.Log(macaz.TypeIndex);
 			switches.Add(
-				Vector3Int.FloorToInt(macaz.transform.position),
+				Vector3Int.RoundToInt(macaz.transform.position),
 				availableTiles[macaz.TypeIndex]);
 		}
 	}

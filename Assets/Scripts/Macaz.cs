@@ -44,7 +44,7 @@ public class Macaz : MonoBehaviour
 			transform.position,
 			switchPrefabs[(int)switchType].transform.rotation);
 
-		grid.ChangeSwitch(Vector3Int.FloorToInt(transform.position), this);
+		grid.ChangeSwitch(Vector3Int.RoundToInt(transform.position), this);
 	}
 
 	public void SwitchSwitchType()
@@ -61,7 +61,7 @@ public class Macaz : MonoBehaviour
 			transform.position,
 			switchPrefabs[(int)switchType].transform.rotation);
 
-		grid.ChangeSwitch(Vector3Int.FloorToInt(transform.position), this);
+		grid.ChangeSwitch(Vector3Int.RoundToInt(transform.position), this);
 	}
 
 	public void Highlight()

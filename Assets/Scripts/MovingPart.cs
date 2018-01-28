@@ -8,16 +8,29 @@ public class MovingPart : MonoBehaviour
 	Vector3Int newPos;
 	TerrainGrid grid;
 
+	[SerializeField]
+	Transform coloredPart;
+
 	private float speed = 2f;
 
-	public void Initialize()
+	public void Initialize(Color color)
 	{
 		grid = FindObjectOfType<TerrainGrid>();
-		currentPos = Vector3Int.FloorToInt(transform.position);
-		var dir = Vector3Int.FloorToInt(transform.forward);
+		currentPos = Vector3Int.RoundToInt(transform.position);
+		var dir = Vector3Int.RoundToInt(transform.forward);
 		var targetDir = grid.GetDirectionFor(currentPos, dir);
 		//Debug.Log(targetDir);
+		if (coloredPart != null)
+		coloredPart.GetComponent<MeshRenderer>().materials[1].color = color;
+
 		StartCoroutine(Move(currentPos, dir, targetDir));
+	}
+
+	public Color GetColor()
+	{
+		if (coloredPart != null)
+		return coloredPart.GetComponent<MeshRenderer>().materials[1].color;
+		else return Color.white;
 	}
 
 	private IEnumerator Move(

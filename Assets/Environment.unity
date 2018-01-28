@@ -215,7 +215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1835568985845834, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_Name
@@ -271,7 +271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -294,6 +294,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &118819810
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &135169393
 Prefab:
@@ -332,7 +374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1835568985845834, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_Name
@@ -351,6 +393,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &224618306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224618307}
+  - component: {fileID: 224618308}
+  m_Layer: 0
+  m_Name: TunnelPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &224618307
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 224618306}
+  m_LocalRotation: {x: -0, y: 0.0000004768371, z: -0, w: -1}
+  m_LocalPosition: {x: -3, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 360, z: 0}
+--- !u!114 &224618308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 224618306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
+  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
+  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
+  tunnelRenderer: {fileID: 819860994}
 --- !u!1 &226504087
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +448,7 @@ GameObject:
   - component: {fileID: 226504090}
   - component: {fileID: 226504089}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: spawn_p3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +465,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &226504089
 MeshRenderer:
@@ -433,7 +519,7 @@ GameObject:
   - component: {fileID: 234764457}
   - component: {fileID: 234764456}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: spawn_p1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,7 +536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &234764456
 MeshRenderer:
@@ -530,7 +616,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -554,6 +640,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &272061317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 272061318}
+  - component: {fileID: 272061319}
+  m_Layer: 0
+  m_Name: TunnelPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &272061318
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272061317}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -18, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &272061319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272061317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
+  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
+  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
+  tunnelRenderer: {fileID: 1290005287}
 --- !u!1001 &468437188
 Prefab:
   m_ObjectHideFlags: 0
@@ -591,7 +721,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1835568985845834, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_Name
@@ -610,12 +740,120 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
   m_IsPrefabParent: 0
+--- !u!23 &475531800 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23472885635118682, guid: 8aea213a0a26aa54b950fc7ff912e09e,
+    type: 2}
+  m_PrefabInternal: {fileID: 118819810}
+--- !u!23 &494426440 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23606171316370974, guid: 8aea213a0a26aa54b950fc7ff912e09e,
+    type: 2}
+  m_PrefabInternal: {fileID: 118819810}
+--- !u!23 &609357679 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23129428242870314, guid: 8aea213a0a26aa54b950fc7ff912e09e,
+    type: 2}
+  m_PrefabInternal: {fileID: 118819810}
+--- !u!1 &612572110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 612572111}
+  - component: {fileID: 612572112}
+  m_Layer: 0
+  m_Name: TunnelPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &612572111
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612572110}
+  m_LocalRotation: {x: -0, y: 0.0000004768371, z: -0, w: -1}
+  m_LocalPosition: {x: 3, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 360, z: 0}
+--- !u!114 &612572112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612572110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
+  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
+  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
+  tunnelRenderer: {fileID: 1280937417}
+--- !u!1 &705303823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 705303824}
+  - component: {fileID: 705303825}
+  m_Layer: 0
+  m_Name: TunnelPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &705303824
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705303823}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 14, y: 0, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &705303825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705303823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
+  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
+  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
+  tunnelRenderer: {fileID: 1603931408}
 --- !u!114 &723351196 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114098425862906150, guid: 8aea213a0a26aa54b950fc7ff912e09e,
     type: 2}
-  m_PrefabInternal: {fileID: 930977281}
+  m_PrefabInternal: {fileID: 118819810}
   m_Script: {fileID: 11500000, guid: fb2a4faaf5e5b9741903b995a198ced1, type: 3}
+--- !u!23 &819860994 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23235239604694734, guid: 8aea213a0a26aa54b950fc7ff912e09e,
+    type: 2}
+  m_PrefabInternal: {fileID: 118819810}
 --- !u!1 &864277042
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +948,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 2967533a2097ee24d91a969fb5e8e2ad, type: 2}
+--- !u!1 &890764535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 890764536}
+  - component: {fileID: 890764537}
+  m_Layer: 0
+  m_Name: TunnelPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &890764536
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890764535}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -7, y: 0, z: 14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &890764537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890764535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
+  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
+  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
+  tunnelRenderer: {fileID: 1786390900}
 --- !u!1001 &915355169
 Prefab:
   m_ObjectHideFlags: 0
@@ -747,7 +1029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1835568985845834, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_Name
@@ -765,48 +1047,6 @@ Prefab:
       objectReference: {fileID: 723351196}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &930977281
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232673521167250, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8aea213a0a26aa54b950fc7ff912e09e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &954620559
 Prefab:
@@ -845,7 +1085,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1835568985845834, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_Name
@@ -901,7 +1141,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1835568985845834, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_Name
@@ -957,7 +1197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -981,6 +1221,104 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1102490986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1102490987}
+  - component: {fileID: 1102490988}
+  m_Layer: 0
+  m_Name: TunnelPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1102490987
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102490986}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 14, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &1102490988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102490986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
+  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
+  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
+  tunnelRenderer: {fileID: 609357679}
+--- !u!23 &1280937417 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23218586053938316, guid: 8aea213a0a26aa54b950fc7ff912e09e,
+    type: 2}
+  m_PrefabInternal: {fileID: 118819810}
+--- !u!1 &1286991443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1286991444}
+  - component: {fileID: 1286991445}
+  m_Layer: 0
+  m_Name: TunnelPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286991444
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286991443}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -18, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1286991445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286991443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
+  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
+  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
+  tunnelRenderer: {fileID: 475531800}
+--- !u!23 &1290005287 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23792049649550782, guid: 8aea213a0a26aa54b950fc7ff912e09e,
+    type: 2}
+  m_PrefabInternal: {fileID: 118819810}
 --- !u!1001 &1363691013
 Prefab:
   m_ObjectHideFlags: 0
@@ -1018,7 +1356,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -1079,7 +1417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -1136,7 +1474,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -1160,48 +1498,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1542347308
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4535494877619706, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -4.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535494877619706, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535494877619706, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535494877619706, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535494877619706, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535494877619706, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535494877619706, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4535494877619706, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 884cbe13e6707a244ad6bf2e199acfaa, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1575067414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,7 +1509,7 @@ GameObject:
   - component: {fileID: 1575067417}
   - component: {fileID: 1575067416}
   m_Layer: 0
-  m_Name: Capsule (3)
+  m_Name: spawn_p4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1230,7 +1526,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1575067416
 MeshRenderer:
@@ -1273,6 +1569,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1575067414}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1603931408 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23011039971037572, guid: 8aea213a0a26aa54b950fc7ff912e09e,
+    type: 2}
+  m_PrefabInternal: {fileID: 118819810}
 --- !u!1 &1616040308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1607,11 @@ MonoBehaviour:
   - {fileID: 2077335514}
   - {fileID: 226504088}
   - {fileID: 1575067415}
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.37931037, b: 1, a: 1}
+  - {r: 1, g: 0.7655173, b: 0, a: 1}
+  - {r: 0, g: 0.7205882, b: 0.15405674, a: 1}
 --- !u!4 &1616040310
 Transform:
   m_ObjectHideFlags: 0
@@ -1317,7 +1623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1633299797
 Prefab:
@@ -1356,7 +1662,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114645314167560698, guid: 013268789c3abba4a8e3c876b24abc6a,
         type: 2}
@@ -1366,49 +1672,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1667785250
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1667785251}
-  - component: {fileID: 1667785252}
-  m_Layer: 0
-  m_Name: Tunnel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1667785251
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1667785250}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -7, y: 0, z: 14}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1667785252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1667785250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
-  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
-  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
 --- !u!1001 &1716023808
 Prefab:
   m_ObjectHideFlags: 0
@@ -1446,7 +1709,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -1470,6 +1733,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1722002414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1722002415}
+  - component: {fileID: 1722002416}
+  m_Layer: 0
+  m_Name: TunnelPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722002415
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722002414}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.0000004768371}
+  m_LocalPosition: {x: 3, y: 0, z: 13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
+--- !u!114 &1722002416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722002414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062c56c4826b8cb4793760d079c99368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locomotive: {fileID: 1582231551218342, guid: ea7a102c60783d14fa81d0ccffd39367, type: 2}
+  wagon: {fileID: 1186260357860880, guid: d107925c627e575498caf2fcd7ffa42e, type: 2}
+  gun: {fileID: 1357114193934230, guid: abd1d3270cff74d42b1674d6800a4a01, type: 2}
+  tunnelRenderer: {fileID: 494426440}
 --- !u!1001 &1739822125
 Prefab:
   m_ObjectHideFlags: 0
@@ -1507,7 +1814,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1835568985845834, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_Name
@@ -1526,6 +1833,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
   m_IsPrefabParent: 0
+--- !u!23 &1786390900 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23769434317693042, guid: 8aea213a0a26aa54b950fc7ff912e09e,
+    type: 2}
+  m_PrefabInternal: {fileID: 118819810}
 --- !u!1001 &1903448045
 Prefab:
   m_ObjectHideFlags: 0
@@ -1563,7 +1875,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -1624,7 +1936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4884101485971240, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1835568985845834, guid: 013268789c3abba4a8e3c876b24abc6a, type: 2}
       propertyPath: m_Name
@@ -1680,7 +1992,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -1741,7 +2053,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4478589079944080, guid: 009ba115f75df6244ac2332ff888458b, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 114444184281810578, guid: 009ba115f75df6244ac2332ff888458b,
         type: 2}
@@ -1776,7 +2088,7 @@ GameObject:
   - component: {fileID: 2077335516}
   - component: {fileID: 2077335515}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: spawn_p2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1793,7 +2105,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2077335515
 MeshRenderer:
