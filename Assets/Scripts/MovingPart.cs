@@ -72,6 +72,12 @@ public class MovingPart : MonoBehaviour
 			mp.Explode();
 			Explode();
 		}
+
+		var c = other.GetComponent<Cliff>();
+		if (c != null)
+		{
+			Explode();
+		}
 	}
 
 
