@@ -17,15 +17,19 @@ public class CharacterInput : MonoBehaviour
 
 	bool isGunning;
 
+	[SerializeField]
+	MeshRenderer charMrenderer;
+
 	void Awake()
 	{
 		agent = GetComponent<NavMeshAgent>();
 		isGunning = false;
 	}
 
-	public void Initialize(XboxController c)
+	public void Initialize(XboxController c, Color color)
 	{
 		controller = c;
+		charMrenderer.materials[0].color = color;
 	}
 
 	void Update()

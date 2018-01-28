@@ -18,7 +18,7 @@ public class Main : MonoBehaviour
 	void Awake()
 	{
 		Instance = this;
-		
+
 		if (PlayerPrefs.GetInt("player1") > 0)
 		{
 			var newChar = Instantiate(
@@ -26,7 +26,7 @@ public class Main : MonoBehaviour
 				spawnPoints[0].position,
 				Quaternion.identity);
 
-			newChar.GetComponent<CharacterInput>().Initialize(XboxController.First);
+			newChar.GetComponent<CharacterInput>().Initialize(XboxController.First, colors[0]);
 		}
 
 		if (PlayerPrefs.GetInt("player2") > 0)
@@ -37,7 +37,7 @@ public class Main : MonoBehaviour
 				Quaternion.identity);
 
 				
-			newChar.GetComponent<CharacterInput>().Initialize(XboxController.Second);
+			newChar.GetComponent<CharacterInput>().Initialize(XboxController.Second, colors[1]);
 		}
 
 		if (PlayerPrefs.GetInt("player3") > 0)
@@ -47,7 +47,7 @@ public class Main : MonoBehaviour
 				spawnPoints[2].position,
 				Quaternion.identity);
 
-			newChar.GetComponent<CharacterInput>().Initialize(XboxController.Third);
+			newChar.GetComponent<CharacterInput>().Initialize(XboxController.Third, colors[2]);
 		}
 
 		if (PlayerPrefs.GetInt("player4") > 0)
@@ -57,7 +57,7 @@ public class Main : MonoBehaviour
 				spawnPoints[3].position,
 				Quaternion.identity);
 				
-			newChar.GetComponent<CharacterInput>().Initialize(XboxController.Fourth);
+			newChar.GetComponent<CharacterInput>().Initialize(XboxController.Fourth, colors[3]);
 		}
 
 		tunnels = FindObjectsOfType(typeof(Tunnel)) as Tunnel[];

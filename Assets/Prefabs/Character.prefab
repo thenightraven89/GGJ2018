@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: 1
+  charMrenderer: {fileID: 23021068107622592}
 --- !u!135 &135371914486984982
 SphereCollider:
   m_ObjectHideFlags: 1

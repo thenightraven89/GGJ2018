@@ -22,7 +22,21 @@ public class MenuUI : MonoBehaviour
 
 	void Update()
 	{
-		if (XCI.GetButtonDown(XboxButton.Start, XboxController.Any))
+		if (XCI.GetButtonDown(XboxButton.X, XboxController.Any))
+		{
+			float playerCount = 0f;
+			if (PlayerPrefs.GetInt("player1") > 0) playerCount++;
+			if (PlayerPrefs.GetInt("player2") > 0) playerCount++;
+			if (PlayerPrefs.GetInt("player3") > 0) playerCount++;
+			if (PlayerPrefs.GetInt("player4") > 0) playerCount++;
+
+			if (playerCount > 1)
+			{
+				SceneManager.LoadScene("EnvironmentSmall");
+			}
+		}
+
+		if (XCI.GetButtonDown(XboxButton.Y, XboxController.Any))
 		{
 			float playerCount = 0f;
 			if (PlayerPrefs.GetInt("player1") > 0) playerCount++;
