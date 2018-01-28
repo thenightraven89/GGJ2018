@@ -32,7 +32,8 @@ public class MenuUI : MonoBehaviour
 
 			if (playerCount > 1)
 			{
-				SceneManager.LoadScene("EnvironmentSmall");
+				PlayerPrefs.SetString("level", "EnvironmentSmall");
+				SceneManager.LoadScene("Instructions");
 			}
 		}
 
@@ -46,7 +47,8 @@ public class MenuUI : MonoBehaviour
 
 			if (playerCount > 1)
 			{
-				SceneManager.LoadScene("Environment");
+				PlayerPrefs.SetString("level", "Environment");
+				SceneManager.LoadScene("Instructions");
 			}
 		}
 
