@@ -93,7 +93,7 @@ public class Main : MonoBehaviour
 				fromTunnel = Random.Range(0, tunnels.Length);
 			}
 
-			tunnels[fromTunnel].SpawnTrain(Random.Range(1, 3), color);
+			tunnels[fromTunnel].SpawnTrain(Random.Range(2, 5), color);
 
 			yield return new WaitForSeconds(trainTimeGap);
 

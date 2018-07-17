@@ -20,6 +20,9 @@ public class CharacterInput : MonoBehaviour
 	[SerializeField]
 	MeshRenderer charMrenderer;
 
+	[SerializeField]
+	Animator animator;
+
 	void Awake()
 	{
 		agent = GetComponent<NavMeshAgent>();
@@ -43,7 +46,12 @@ public class CharacterInput : MonoBehaviour
 		{
 			if (dir.magnitude == 1f)
 			{
+				animator.SetBool("isWalking", true);
 				transform.forward = dir;
+			}
+			else
+			{
+				animator.SetBool("isWalking", false);
 			}
 
 			agent.Move(transform.forward * dir.magnitude * Time.deltaTime * speed);

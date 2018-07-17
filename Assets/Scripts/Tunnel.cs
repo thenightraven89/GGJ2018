@@ -63,8 +63,8 @@ public class Tunnel : MonoBehaviour
 
 		yield return new WaitForSeconds(spawnTime);
 		
-		var newGun = Instantiate(gun, transform.position, transform.rotation);
-		newGun.GetComponent<MovingPart>().Initialize(color);
+		// var newGun = Instantiate(gun, transform.position, transform.rotation);
+		// newGun.GetComponent<MovingPart>().Initialize(color);
 	}
 
 	void OnTriggerEnter(Collider other)

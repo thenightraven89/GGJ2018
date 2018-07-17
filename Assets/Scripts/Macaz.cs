@@ -21,6 +21,9 @@ public class Macaz : MonoBehaviour
 	[SerializeField]
 	private TerrainGrid grid;
 
+	[SerializeField]
+	private Animator animator;
+
 	private int currentSwitchIndex;
 
 	void Start()
@@ -70,6 +73,8 @@ public class Macaz : MonoBehaviour
 		switchType = (SwitchType)currentSwitch.GetComponent<Macaz>().TypeIndex;
 
 		grid.ChangeSwitch(Vector3Int.RoundToInt(transform.position), (int)switchType);
+
+		animator.SetTrigger("isUsed");
 	}
 
 	public void Highlight()
