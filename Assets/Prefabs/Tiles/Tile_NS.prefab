@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4466872713560768}
   - component: {fileID: 33204319473611810}
   - component: {fileID: 23212059819819992}
+  - component: {fileID: 114789198905421422}
   m_Layer: 0
   m_Name: Tile_NS
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1731743544787546}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.2, y: 0.6, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 36ae7fa4c7c4ffa43b21728c49212a1a, type: 2}
   m_StaticBatchInfo:
@@ -82,3 +84,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1731743544787546}
   m_Mesh: {fileID: 4300000, guid: e287ef84aa28c2c44afff0c915350564, type: 3}
+--- !u!114 &114789198905421422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731743544787546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069bc69918114fa46b092f158f320606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchType: 4
+  switchPrefabs: []
+  macazRenderer: {fileID: 0}
+  spawnGeometry: 0
+  grid: {fileID: 0}

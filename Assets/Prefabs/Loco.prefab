@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114479865896620468}
   - component: {fileID: 135115404165432040}
   - component: {fileID: 54859366506493050}
+  - component: {fileID: 208184527154919590}
   m_Layer: 0
   m_Name: Loco
   m_TagString: Untagged
@@ -86,6 +87,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 25d266931b1f4c645aac76b01e966be1, type: 2}
   - {fileID: 2100000, guid: 394f547b3bf9f5349bafb5d39f208d8e, type: 2}
@@ -142,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coloredPart: {fileID: 4424449296773842}
+  isInvincible: 0
 --- !u!135 &135115404165432040
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -154,3 +157,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!208 &208184527154919590
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1582231551218342}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

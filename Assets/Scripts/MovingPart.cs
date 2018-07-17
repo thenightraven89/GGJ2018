@@ -56,7 +56,7 @@ public class MovingPart : MonoBehaviour
 		var targetDir = grid.GetDirectionFor(fromPos + toDir, toDir);
 		if (targetDir == Vector3Int.zero)
 		{
-			Explode();
+			Explode(false);
 		}
 		else
 		{
@@ -69,26 +69,30 @@ public class MovingPart : MonoBehaviour
 		var mp = other.GetComponent<MovingPart>();
 		if (mp != null)
 		{
-			mp.Explode();
-			Explode();
+			mp.Explode(false);
+			Explode(false);
 		}
 
 		var c = other.GetComponent<Cliff>();
 		if (c != null)
 		{
-			Explode();
+			Explode(c.isSilent);
 		}
 	}
 
 
 	public bool isInvincible;
 
-	public void Explode()
+	public void Explode(bool isSilent)
 	{
 		if (!isInvincible)
 		{
-		Main.Instance.GenerateExplosionPS(transform.position, 50);
-		Destroy(gameObject);
+			if (!isSilent)
+			{
+				Main.Instance.GenerateExplosionPS(transform.position, 50);
+			}
+
+			Destroy(gameObject);
 		}
 	}
 }

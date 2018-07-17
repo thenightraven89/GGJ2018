@@ -21,6 +21,8 @@ public class Macaz : MonoBehaviour
 	[SerializeField]
 	private TerrainGrid grid;
 
+	private int currentSwitchIndex;
+
 	void Start()
 	{
 		if (spawnGeometry)
@@ -39,29 +41,35 @@ public class Macaz : MonoBehaviour
 
 	public void Spawn()
 	{
-		currentSwitch = Instantiate(
-			switchPrefabs[(int)switchType],
-			transform.position,
-			switchPrefabs[(int)switchType].transform.rotation);
+		currentSwitchIndex = 0;
 
-		grid.ChangeSwitch(Vector3Int.RoundToInt(transform.position), this);
+		currentSwitch = Instantiate(
+			switchPrefabs[currentSwitchIndex],
+			transform.position,
+			switchPrefabs[currentSwitchIndex].transform.rotation);
+
+		switchType = (SwitchType)currentSwitch.GetComponent<Macaz>().TypeIndex;
+
+		grid.ChangeSwitch(Vector3Int.RoundToInt(transform.position), (int)switchType);
 	}
 
 	public void SwitchSwitchType()
 	{
-		switchType = (SwitchType)(((int)switchType + 1) % System.Enum.GetNames(typeof(SwitchType)).Length);
-
 		if (currentSwitch != null)
 		{
 			Destroy(currentSwitch);
 		}
 
-		currentSwitch = Instantiate(
-			switchPrefabs[(int)switchType],
-			transform.position,
-			switchPrefabs[(int)switchType].transform.rotation);
+		currentSwitchIndex = (currentSwitchIndex + 1) % switchPrefabs.Length;
 
-		grid.ChangeSwitch(Vector3Int.RoundToInt(transform.position), this);
+		currentSwitch = Instantiate(
+			switchPrefabs[currentSwitchIndex],
+			transform.position,
+			switchPrefabs[currentSwitchIndex].transform.rotation);
+
+		switchType = (SwitchType)currentSwitch.GetComponent<Macaz>().TypeIndex;
+
+		grid.ChangeSwitch(Vector3Int.RoundToInt(transform.position), (int)switchType);
 	}
 
 	public void Highlight()
