@@ -31,26 +31,25 @@ public class Tunnel : MonoBehaviour
 	public void SetColor(Color color, float availableTime)
 	{
 		tunnelRenderer.material.color = color;
-		StartCoroutine(ResetColor(availableTime));
 	}
 
-	IEnumerator ResetColor(float availableTime)
+	public void ResetColor()
 	{
-		yield return new WaitForSeconds(availableTime);
+		Main.Instance.RemoveActiveColor(tunnelRenderer.material.color);
 		tunnelRenderer.material.color = Color.white;
 	}
 
-	public void SpawnTrain(int wagonCount, Color color)
+	public void SpawnTrain(int wagonCount, Color color, Tunnel destination)
 	{
-		StartCoroutine(SpawnTrainCoroutine(wagonCount, color));
+		StartCoroutine(SpawnTrainCoroutine(wagonCount, color, destination));
 	}
 
-	private IEnumerator SpawnTrainCoroutine(int wagonCount, Color color)
+	private IEnumerator SpawnTrainCoroutine(int wagonCount, Color color, Tunnel destination)
 	{
 		var newLocomotive = Instantiate(locomotive, transform.position, transform.rotation);
 		newLocomotive.GetComponent<MovingPart>().Initialize(color);
 
-		for (int i = 0; i < wagonCount; i++)
+		for (int i = 0; i < wagonCount - 1; i++)
 		{
 			yield return new WaitForSeconds(spawnTime);
 			var newWagon = Instantiate(
@@ -62,6 +61,15 @@ public class Tunnel : MonoBehaviour
 		}
 
 		yield return new WaitForSeconds(spawnTime);
+
+		var lastWagon = Instantiate(
+			wagon,
+			transform.position,
+			transform.rotation);
+
+			lastWagon.GetComponent<MovingPart>().Initialize(color);
+			var lastCart = lastWagon.AddComponent<LastCart>();
+			lastCart.destination = destination;
 		
 		// var newGun = Instantiate(gun, transform.position, transform.rotation);
 		// newGun.GetComponent<MovingPart>().Initialize(color);
@@ -85,6 +93,8 @@ public class Tunnel : MonoBehaviour
 				// play a nasty sfx
 				// train explodes?
 			}
+
+			mp.Explode(true);
 		}
 	}
 }

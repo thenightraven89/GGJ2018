@@ -13,6 +13,10 @@ public class Main : MonoBehaviour
 
 	private Tunnel[] tunnels;
 
+	private float trainTimeGap = 10f;
+
+	private List<Color> activeColors;
+
 	public static Main Instance {get; private set;}
 
 	void Awake()
@@ -62,10 +66,22 @@ public class Main : MonoBehaviour
 
 		tunnels = FindObjectsOfType(typeof(Tunnel)) as Tunnel[];
 
+		activeColors = new List<Color>();
+
 		StartCoroutine(LaunchTrain());
 	}
 
-	private float trainTimeGap = 10f;
+	public void RemoveActiveColor(Color color)
+	{
+		if (activeColors.Contains(color))
+		{
+			activeColors.Remove(color);
+		}
+		else
+		{
+			Debug.LogFormat("{0} not present in activeColors", color);
+		}
+	}
 
 	private IEnumerator LaunchTrain()
 	{
@@ -73,31 +89,47 @@ public class Main : MonoBehaviour
 
 		while (true)
 		{
-
-			Color color = colors[Random.Range(0, colors.Length)];
-
-			int fromTunnel = Random.Range(0, tunnels.Length);
-			int toTunnel = Random.Range(0, tunnels.Length);
-
-			while (tunnels[toTunnel].IsBusy())
+			int busyCount = 0;
+			foreach (var tunnel in tunnels)
 			{
-				yield return null;
-				toTunnel = Random.Range(0, tunnels.Length);
+				if (tunnel.IsBusy()) busyCount++;
 			}
 
-			tunnels[toTunnel].SetColor(color, 30f);
-
-			while (tunnels[fromTunnel].IsBusy())
+			if (busyCount < tunnels.Length - 2)
 			{
-				yield return null;
-				fromTunnel = Random.Range(0, tunnels.Length);
+				Color color = colors[Random.Range(0, colors.Length)];
+				while (activeColors.Contains(color))
+				{
+					color = colors[Random.Range(0, colors.Length)];
+				}
+
+				activeColors.Add(color);
+
+				int fromTunnel = Random.Range(0, tunnels.Length);
+				int toTunnel = Random.Range(0, tunnels.Length);
+
+				while (tunnels[toTunnel].IsBusy())
+				{
+					yield return null;
+					toTunnel = Random.Range(0, tunnels.Length);
+				}
+
+				tunnels[toTunnel].SetColor(color, 30f);
+
+				while (tunnels[fromTunnel].IsBusy())
+				{
+					yield return null;
+					fromTunnel = Random.Range(0, tunnels.Length);
+				}
+
+				tunnels[fromTunnel].SpawnTrain(Random.Range(2, 5), color, tunnels[toTunnel]);
+
+				yield return new WaitForSeconds(trainTimeGap);
+
+				trainTimeGap = Mathf.Clamp(trainTimeGap - 0.25f, 4f, 10f);
 			}
 
-			tunnels[fromTunnel].SpawnTrain(Random.Range(2, 5), color);
-
-			yield return new WaitForSeconds(trainTimeGap);
-
-			trainTimeGap = Mathf.Clamp(trainTimeGap - 0.25f, 4f, 10f);
+			yield return null;
 		}
 	}
 
