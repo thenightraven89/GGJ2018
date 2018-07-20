@@ -142,6 +142,26 @@ public class Main : MonoBehaviour
 		src.PlayOneShot(crashFX);
 	}
 
+	public void HaltAllTrainsOfColor(Color color)
+	{
+		var mps = FindObjectsOfType(typeof(MovingPart)) as MovingPart[];
+		foreach (var mp in mps)
+		{
+			if (mp.GetColor() == color)
+			mp.SetSpeed(0f);
+		}
+	}
+
+	public void ResumeAllTrainsOfColor(Color color)
+	{
+		var mps = FindObjectsOfType(typeof(MovingPart)) as MovingPart[];
+		foreach (var mp in mps)
+		{
+			if (mp.GetColor() == color)
+			mp.SetSpeed(2f);
+		}
+	}
+
 	[SerializeField]
 	private AudioClip crashFX;
 

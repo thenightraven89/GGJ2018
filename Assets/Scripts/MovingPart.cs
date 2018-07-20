@@ -11,7 +11,15 @@ public class MovingPart : MonoBehaviour
 	[SerializeField]
 	Transform coloredPart;
 
-	private float speed = 2f;
+	private float currentSpeed;
+	private float targetSpeed;
+
+	private float accel = 1f;
+
+	public void SetSpeed(float target)
+	{
+		targetSpeed = target;
+	}
 
 	public void Initialize(Color color)
 	{
@@ -23,6 +31,8 @@ public class MovingPart : MonoBehaviour
 		if (coloredPart != null)
 		coloredPart.GetComponent<MeshRenderer>().materials[1].color = color;
 
+		currentSpeed = 2f;
+		targetSpeed = 2f;
 		StartCoroutine(Move(currentPos, dir, targetDir));
 	}
 
@@ -47,7 +57,12 @@ public class MovingPart : MonoBehaviour
 		{
 			transform.position = Vector3.Lerp(fromPos, fromPos + toDir, t);
 			transform.forward = Vector3.Lerp(fromDir, toDir, t);
-			t += Time.deltaTime * speed;
+			currentSpeed = Mathf.Clamp(
+				currentSpeed + Mathf.Sign(targetSpeed - currentSpeed) * accel * Time.deltaTime,
+				0,
+				Mathf.Max(currentSpeed, targetSpeed));
+
+			t += Time.deltaTime * currentSpeed;
 			yield return null;
 		}
 

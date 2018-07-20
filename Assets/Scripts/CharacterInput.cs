@@ -17,6 +17,8 @@ public class CharacterInput : MonoBehaviour
 
 	bool isGunning;
 
+	bool isHalting;
+
 	[SerializeField]
 	MeshRenderer charMrenderer;
 
@@ -27,6 +29,7 @@ public class CharacterInput : MonoBehaviour
 	{
 		agent = GetComponent<NavMeshAgent>();
 		isGunning = false;
+		isHalting = false;
 	}
 
 	public void Initialize(XboxController c, Color color)
